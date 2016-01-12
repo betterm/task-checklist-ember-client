@@ -1,0 +1,25 @@
+.task-item-checkbox {
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  user-select: none; }
+  .task-item-checkbox .checkbox {
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0; }
+    .task-item-checkbox .checkbox.checked {
+      color: #02b825; }
+    .task-item-checkbox .checkbox.unchecked {
+      color: #b0b0b0; }
+  .task-item-checkbox [type="checkbox"] {
+    position: absolute;
+    left: -9999px; }
+    .task-item-checkbox [type="checkbox"]:not(:checked) + span .checked {
+      display: none; }
+    .task-item-checkbox [type="checkbox"]:checked + span .unchecked {
+      display: none; }
+
+.task-item {
+  margin-left: 20px; }
+
+/*# sourceMappingURL=app.css.map */

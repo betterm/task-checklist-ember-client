@@ -1,0 +1,42 @@
+
+
+.task-item-checkbox {
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  user-select: none;
+
+  .checkbox {
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0;
+
+    &.checked {
+      color: rgb(2, 184, 37);
+    }
+
+    &.unchecked {
+      color: #b0b0b0;
+    }
+  }
+  [type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+
+    &:not(:checked) + span {
+      .checked {
+        display: none;
+      }
+    }
+
+    &:checked + span {
+      .unchecked {
+        display: none;
+      }
+    }
+  }
+}
+.task-item {
+  margin-left: 20px;
+}
+

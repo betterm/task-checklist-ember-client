@@ -1,0 +1,16 @@
+<form id="task-form" class="form-inline" {{action 'addTask' on="submit"}}>
+    <div class="form-group">
+      <label class="sr-only" for="task-name">Task Title</label>
+      {{input autocomplete="off" value=task.name autofocus="autofocus" type="text" class="form-control"
+      id="task-name" placeholder="Task Title"}}
+      <label class="sr-only" for="task-priority">Task Priority</label>
+      {{input autocomplete="off" value=task.priority autofocus="autofocus" type="text" class="form-control"
+      id="task-priority" placeholder="Task Priority"}}
+      <label class="sr-only" for="task-deadline">Task Deadline</label>
+      {{input autocomplete="off" value=task.deadline autofocus="autofocus" type="datetime-local" class="form-control"
+      id="task-deadline"}}
+
+    </div>
+
+    <button type="submit" class="btn btn-primary pull-right">Add Task</button>
+</form>

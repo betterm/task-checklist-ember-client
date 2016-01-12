@@ -1,0 +1,24 @@
+<ul class="list-group">
+  <li class="list-group-item">
+    <div>
+      <div class="task-item-checkbox">
+        {{input tabindex="-1" type="checkbox" checked=task.complete}}
+        <span {{action "toggleComplete" on="click"}}>
+          <span class="sr-only">Complete?</span>
+          <span class="checkbox checked glyphicon glyphicon-check"></span>
+          <span class="checkbox unchecked glyphicon glyphicon-unchecked"></span>
+        </span>
+      </div>
+      <div class="task-item">
+        {{task.name}} | Priority: {{task.priority}} | Deadline: {{task.deadline}}
+          <a href="" class="pull-right" {{action 'deleteTask'}}>
+            <span class="glyphicon glyphicon-remove"></span>
+          </a>
+        {{#link-to 'tasks.edit' task }}
+          <span class="glyphicon glyphicon-edit"></span>
+        {{/link-to}}
+      </div>
+
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,22 @@
+<h2 class="project-details">
+  {{ project.name}}
+  <a href="" class="btn btn-danger pull-right" {{action 'deleteProject'}}>
+    <span class="glyphicon glyphicon-trash"></span>
+  </a>
+  {{#link-to 'projects.edit' project}}
+    <a href="" class="btn btn-success pull-right">
+      <span class="glyphicon glyphicon-pencil"></span>
+    </a>
+  {{/link-to}}
+</h2>
+<br>
+{{task-form}}
+<h3> Tasks:</h3>
+  {{#each project.tasks as |task|}}
+    {{task-item task=task}}
+  {{/each}}
+
+
+
+
+

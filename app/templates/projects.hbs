@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+          <div class="list-group">
+          {{#link-to 'projects.new' class="btn btn-primary btn-block"}} Add new project {{/link-to}}
+          <br>
+          {{#each model as |project|}}
+            {{project-list project=project}}
+          {{/each}}
+          </div>
+
+        </div>
+        <div class="col-sm-8">
+          {{outlet}}
+        </div>
+    </div>
+</div>
