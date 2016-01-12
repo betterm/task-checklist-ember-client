@@ -18,7 +18,7 @@ export default Ember.Component.extend({
         'deadline': this.get('task.deadline')
       });
       task.set('project', project);
-      if (!task.name) return;
+      if (!task.name) { return } ;
       task.save().then(function() {
         project.save();
       });
